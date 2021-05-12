@@ -1,8 +1,8 @@
 <template lang="fr">
     <div>
+        {{product.imageUrl}}
         {{product.name}}
         {{product.description}}
-        {{product.imageUrl}}
         {{product.price}}
         <ul id="example-1">
             <li v-for="lense in product.lenses" :key="product.id">
