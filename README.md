@@ -1,5 +1,5 @@
 # vuejs-orinoco-test
-Personal automated javascript test project.  
+Simple project for training automated tests in Javascript.
 Reuse of the Orinoco API from the OpenClassrooms Web Developer course, available here: https://github.com/OpenClassrooms-Student-Center/JWDP5
 
 ## Project setup
