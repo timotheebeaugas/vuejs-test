@@ -1,29 +1,24 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Index</router-link> |
-      <router-link to="/cart">Cart</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-content class="d-flex align-center ma-0">
+      <v-app-bar app>
+        <router-link to="/">
+          <v-btn icon>
+            <v-icon>mdi-home</v-icon>
+          </v-btn>
+        </router-link>
+        <v-spacer></v-spacer>
+        <router-link to="/cart" class="d-flex justify-end text-decoration-none">
+          <v-btn icon>
+            <v-icon>mdi-cart</v-icon>
+          </v-btn>
+        </router-link>
+      </v-app-bar>
+      <router-view />
+    </v-content>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style lang="css">
+
 </style>
