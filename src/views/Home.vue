@@ -1,5 +1,7 @@
 <template>
   <div class="home">
+      <h1 class="text-center display-3">Orinoco</h1>
+      <h2 class="text-center grey--text">Vintage cameras</h2>
     <ProductsList :data="products" />
   </div>
 </template>

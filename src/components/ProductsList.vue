@@ -1,6 +1,5 @@
 <template>
   <v-container>
-    <h1 class="text-center">Vintage cameras</h1>
     <v-list rounded class="d-flex justify-center">
       <v-list-item-group color="primary">
         <v-list-item v-for="(data, i) in data" :key="i">

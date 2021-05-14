@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-content class="d-flex align-center ma-0">
+    <v-main class="d-flex align-center ma-0">
       <v-app-bar app>
         <router-link to="/">
           <v-btn icon>
@@ -15,7 +15,7 @@
         </router-link>
       </v-app-bar>
       <router-view />
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 
