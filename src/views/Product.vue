@@ -79,7 +79,7 @@ export default {
       price: "",
       select: null,
       snackbar: false,
-      text: `Added to Basket`,
+      text: `Added to Basket`
     };
   },
   mounted() {
@@ -87,20 +87,30 @@ export default {
       .get(process.env.VUE_APP_API_URL + "cameras/" + this.$route.query.id)
       .then(response => {
         this.product = response.data;
-        this.price = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(response.data.price/100)
+        this.price = new Intl.NumberFormat("de-DE", {
+          style: "currency",
+          currency: "EUR"
+        }).format(response.data.price / 100);
+        this.select = response.data.lenses[0];
       });
   },
   methods: {
-    validate () {
-      this.$store.commit('ADD_CAMERA', {name: this.product.name, lense: this.select});
+    validate() {
+      this.$store.commit("ADD_CAMERA", {
+        _id: this.product._id,
+        name: this.product.name,
+        description: this.select,
+        price: this.product.price,
+        imageUrl: this.product.imageUrl
+      });
       this.snackbar = true;
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="css">
-.shadow{
+.shadow {
   text-shadow: 1px 1px 1px rgb(114, 114, 114);
 }
 </style>
