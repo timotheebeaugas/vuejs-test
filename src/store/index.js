@@ -20,6 +20,7 @@ export default new Vuex.Store({
     CLEAR_CART(state) {
         state.cart = [];
         state.cartLength = "0";
+        state.price = null;
     },
   },
   actions: {

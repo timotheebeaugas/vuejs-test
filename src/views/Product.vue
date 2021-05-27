@@ -8,15 +8,16 @@
       class="white--text align-end"
       height="200px"
       :src="product.imageUrl"
+      id="img"
     >
-      <v-card-title elevation="5" class="shadow">{{product.name}}</v-card-title>
+      <v-card-title elevation="5" class="shadow" id="name">{{product.name}}</v-card-title>
     </v-img>
 
-      <v-card-subtitle class="pb-0 orange--text">
+      <v-card-subtitle class="pb-0 orange--text" id="price">
         {{price}}
       </v-card-subtitle>
 
-      <v-card-text class="text--primary">
+      <v-card-text class="text--primary" id="desc">
         <div>{{product.description}}</div>
       </v-card-text>
 

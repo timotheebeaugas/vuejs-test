@@ -19,7 +19,7 @@ export default {
       order: null
     };
   },
-  mounted() {
+  created() {
     this.order = this.$route.query.id;
   }
 };

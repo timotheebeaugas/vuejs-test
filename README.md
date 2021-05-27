@@ -33,7 +33,7 @@ npm run lint
 
 ### Start the tests
 ```
-npm run test:unit
+npm run test
 ```
 
 ### Customize configuration

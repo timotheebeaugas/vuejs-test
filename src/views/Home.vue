@@ -23,8 +23,10 @@ export default {
       products: []
     };
   },
-  mounted() {
-    Vue.axios.get(process.env.VUE_APP_API_URL + "cameras").then(response => {
+  created() {
+    Vue.axios
+    .get(process.env.VUE_APP_API_URL + "cameras")
+    .then(response => {
       this.products = response.data;
     });
   }

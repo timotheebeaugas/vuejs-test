@@ -8,7 +8,7 @@
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title class="d-flex justify-center mb-5" v-if="priceEuro">Total: {{priceEuro}}</v-list-item-title>
-        <v-list-item-title class="d-flex justify-center mb-5" v-if="!priceEuro">Empty</v-list-item-title>
+        <v-list-item-title class="d-flex justify-center mb-5" v-if="!priceEuro" id="info">Empty</v-list-item-title>
       </v-list-item-content>
     </v-list-item>
 
@@ -197,8 +197,7 @@ export default {
       }).then(
         response => {
           this.$router.push({ path: '/confirmation?id='+ response.data.orderId});
-          this.$store.commit("CLEAR_CART");
-          this.priceEuro = null;
+          this.clear();
         },
         error => {
           console.log(error);
